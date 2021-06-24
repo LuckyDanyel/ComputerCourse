@@ -2,9 +2,10 @@
 @mixin calcWidth($w, $wcont) {
       width: $w / $wcont * 100 + 0%;
 }
-@mixin F-size-family($size , $family) {
+@mixin F-size-family-line($size, $family, $line) {
       font-size: $size;
       font-family: "Roboto" + $family;
+      line-height: $line;
 }
 
 @mixin media($breakpoint){
