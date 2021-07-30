@@ -1,0 +1,57 @@
+.page {
+    background-image: url('../../images/header/main-screen__bgc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+    &__center {
+        margin-top: 12.5em;
+        height: 340px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+    &__title {
+        
+    }
+    &__title-heading {
+        font-family: 'RobotoBold';
+        font-size: $fn-XLL;
+        color: white;
+    }
+    &__time {
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: 140px;
+        grid-column-gap: 30px;
+    }
+    &__list {
+        background-color: #121212;
+        padding: 0;
+        list-style-type: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item {
+        
+    }
+    &__item-number {
+        font-family: 'RobotoBold';
+        font-size: $fn-m;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+    }
+    &__item-text {
+        margin-top: 10px;
+        font-family: 'RobotoRegular';
+        font-size: $fn-xxs;
+        color: #FFFFFF;
+        opacity: 40%;
+    }
+}
+

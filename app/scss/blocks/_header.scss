@@ -1,0 +1,42 @@
+
+
+
+.header {
+    max-width: 1750px;
+    margin: 0 auto;
+    padding: 0 1em;
+
+    display: grid;
+    grid-template-columns: minmax(50px, 480px) minmax(400px, 750px) minmax(200px, 440px);
+    grid-template-rows: 1fr;
+    align-items: center;
+
+    height: 100px;
+
+    &__btn-block {
+        justify-self: end;
+    }
+    &__btn-item {
+        font-family: 'RobotoRegular';
+        font-size: $fn-xxs;
+        color: white;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        width: 184px;
+        height: 44px;
+        
+        border-radius: 2em;
+        background: linear-gradient(to bottom right, #C89AFC, #7C6AFA);
+    }
+    &__btn-item_hover {
+
+            &:hover {
+                opacity: 0.8;
+            }
+    }
+
+}
+

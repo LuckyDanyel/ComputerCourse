@@ -1,0 +1,33 @@
+@import 'fonts';
+@import 'mixin';
+@import 'null';
+@import 'var';
+
+
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+.logo {
+
+}
+.menu {
+    display: flex;
+    justify-content: space-between; 
+
+    &__item {
+
+        font-family: 'RobotoRegular';
+        font-size: $fn-xxs;
+        
+        color: white;
+    }
+    &__item_hover {
+        
+        &:hover{
+            opacity: 0.8;
+        }
+        
+    }
+}
