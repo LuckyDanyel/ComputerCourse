@@ -3,8 +3,14 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    
+    min-height: 1000px;
+    position: relative;
 
+    ul {
+        margin: 0;
+        padding: 0;
+    }
     &__center {
         margin-top: 12.5em;
         height: 340px;
@@ -52,6 +58,109 @@
         font-size: $fn-xxs;
         color: #FFFFFF;
         opacity: 40%;
+    }
+    &__footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #121212;
+
+        color: white;
+        
+
+    }
+    &__footer-wrapper {
+        display: grid;
+        grid-template-columns:175px 260px 3fr;
+        grid-column-gap: 5%;
+        grid-template-rows: 150px;
+        align-items: center;
+        
+    }
+    &__btn-block {
+
+    }
+    &__btn-item {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 166px;
+        height: 44px;
+
+        border-radius: 40px;
+        border-radius: 2em;
+        background: linear-gradient(to bottom right, #DF5950, #451046);
+        color: white;
+
+        font-family: 'RobotoBold';
+        font-size: $fn-xxs;
+    }
+    &__btn-item_hover{
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &__members {
+
+    }
+    &__members-list {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+
+            &:first-child{
+                margin-bottom: 30px;
+            }
+        
+    }
+    &__memebers-item {
+
+        font-family: 'RobotoRegular';
+        font-size: $fn-xxs;
+        color:#FFFFFF;
+        opacity: 40%;
+    }
+    &__members-count {
+        font-family: 'RobotoBold';
+        font-size: $fn-xxs;
+        color:#FFFFFF;
+    }
+    &__money {
+        display: grid;
+        
+    }
+    &__money-list {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+
+            &:first-child{
+                max-width: 280px;
+            }
+    }
+    
+    &__money-count {
+        font-family: 'RobotoRegular';
+        font-size: $fn-xxs;
+        opacity: 40%;
+    }
+    &__count {
+        height: 6px;
+        margin: 15px 0;
+        display: flex;
+    }
+    &__count-complete {
+        background: linear-gradient(to bottom right, #DF5950, #451046);
+        width: 40%;
+        height: inherit;
+    }
+    &__count-empty {
+        background-color: white;
+        width: 60%;
+        height: inherit;
     }
 }
 
