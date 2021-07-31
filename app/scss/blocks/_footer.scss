@@ -1,0 +1,50 @@
+.footer {
+    
+    color: white;
+    text-align: center;
+
+    margin-top: 180px;
+    margin-bottom: 50px;
+    &__container {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    &__heading {
+        font-size: $fn-XL;
+        font-family: 'RobotoBold';
+    }
+    &__text {
+        font-size: $fn-xxs;
+        font-family: 'RobotoRegular';
+        opacity: 40%;
+
+        line-height: 160%;
+
+        margin-bottom: 55px;
+    }
+    &__social {
+        max-width: 320px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+            
+           a{
+               width: 50px;
+           }
+    }
+    &__background-item {
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 50px;
+        height: 50px;
+
+        background: linear-gradient(to right, #C89AFC, #7C6AFA);
+        border-radius: 50%;
+
+        margin: 0;
+            
+    }
+}

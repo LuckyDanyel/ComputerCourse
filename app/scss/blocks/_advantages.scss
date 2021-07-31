@@ -1,0 +1,48 @@
+
+.advantages {
+margin-top: 200px;
+color: white;
+    &__heading {
+        display: flex;
+        justify-content: center;
+
+        font-size: $fn-XL;
+        font-family: 'RobotoBold';
+
+        margin-bottom: 120px;
+    }
+    &__block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 80px;
+
+        text-align: center;
+    }
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        
+        
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+     
+
+            h3 {
+                font-size: $fn-s;
+                font-family: 'RobotoBold';
+            }
+            p {
+                display: inline-block;
+                font-size: $fn-xxs;
+                font-family: 'RobotoRegular';
+
+                max-width: 358px;
+                
+                opacity: 40%;
+                
+            }
+    }
+}

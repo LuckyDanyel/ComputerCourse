@@ -6,9 +6,9 @@ let seconds = document.querySelector('#seconds');
 let date = new Date();
 
 date.setDate(1);
-let getDaysEvent = 1;
+let getDaysEvent = 24;
 let getHoursNow = 1;
-let getMinutesNow = 3;
+let getMinutesNow = 2;
 let getSecondsNow = 1;
 
 time.innerHTML = getDaysEvent;
@@ -38,6 +38,7 @@ function eventCount(){
     getSecondsNow--;
     seconds.innerHTML = getSecondsNow;
     }
+    console.log(getMinutesNow);
  
     if(getMinutesNow == 1 && getHoursNow == 0 && getDaysEvent == 0 && getSecondsNow == 0){
         getMinutesNow = 0;
@@ -59,7 +60,7 @@ function eventCount(){
     if(getMinutesNow == 0 && getSecondsNow == 0){
         getHoursNow--;
         hours.innerHTML = getHoursNow;
-        getMinutesNow = 59;
+        getMinutesNow = 60;
         minutes.innerHTML = getMinutesNow;
     }
     
@@ -82,7 +83,7 @@ function eventCount(){
     
 }
 
-const interval = setInterval(eventCount, 100);
+const interval = setInterval(eventCount, 1000);
 
 
-const lastSecondInterval = setInterval(lastSeconds, 100);
+const lastSecondInterval = setInterval(lastSeconds, 1000);

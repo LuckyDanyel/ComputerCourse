@@ -1,0 +1,41 @@
+.partners {
+    margin-top: 200px;
+    &__up-left {
+        max-width: 700px;
+        display: flex;
+        justify-content: space-between;
+        
+        margin-bottom: 100px;
+    }
+    &__logo {
+        align-self: flex-end;
+    }
+    &__heading {
+        color: white;
+        font-size: $fn-XL;
+        font-family: 'RobotoBold';
+    }
+    &__main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+            width: 100%;
+            padding: 30px 0;
+            &:nth-child(-n+4){
+                border-bottom: 1px solid #393939;
+                
+            }
+            &:nth-child(n){
+                border-right: 1px solid #393939;
+                
+            }
+            &:nth-child(4n){
+                border-right: none;
+            }
+    }
+}
