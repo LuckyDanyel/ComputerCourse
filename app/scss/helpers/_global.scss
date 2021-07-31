@@ -4,7 +4,9 @@
 @import 'var';
 
 
-
+body {
+    background-image: url('../../images/bgc.png');
+}
 .container {
     max-width: 1350px;
     margin: 0 auto;
@@ -22,6 +24,8 @@
         font-size: $fn-xxs;
         
         color: white;
+
+        
     }
     &__item_hover {
         

@@ -1,0 +1,35 @@
+
+.about {
+    margin-top: 200px;
+    &__wrpapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 120px;
+    }
+
+    &__image {
+        margin: 0;
+        align-self: center;
+        div {
+            
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__title {
+        
+        color: white;
+    }
+    &__heading {
+        font-family: 'RobotoBold';
+        font-size: $fn-m;
+        margin: 5% 0;
+    }
+    &__text {
+        font-family: 'RobotoRegular';
+        font-size: $fn-xxs;
+        line-height: 160%;
+    }
+    
+}

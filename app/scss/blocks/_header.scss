@@ -7,8 +7,9 @@
     padding: 0 1em;
 
     display: grid;
-    grid-template-columns: minmax(50px, 480px) minmax(400px, 750px) minmax(200px, 440px);
+    grid-template-columns: minmax(50px, 480px) minmax(500px, 750px) minmax(200px, 440px);
     grid-template-rows: 1fr;
+    grid-column-gap: 15px;
     align-items: center;
 
     height: 100px;

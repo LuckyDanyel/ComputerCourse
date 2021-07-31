@@ -8,7 +8,7 @@ let date = new Date();
 date.setDate(1);
 let getDaysEvent = 1;
 let getHoursNow = 1;
-let getMinutesNow = 20;
+let getMinutesNow = 3;
 let getSecondsNow = 1;
 
 time.innerHTML = getDaysEvent;
@@ -34,9 +34,10 @@ if(getHoursNow == 0 && getMinutesNow == 0 && getDaysEvent == 0){
 }
 }
 function eventCount(){
-    
+    if(getSecondsNow > 0) {
     getSecondsNow--;
     seconds.innerHTML = getSecondsNow;
+    }
  
     if(getMinutesNow == 1 && getHoursNow == 0 && getDaysEvent == 0 && getSecondsNow == 0){
         getMinutesNow = 0;
@@ -48,14 +49,14 @@ function eventCount(){
         return 0;
     }
     
-    if(getSecondsNow == 0){
+    if(getSecondsNow == 0 && getMinutesNow != 0){
         getMinutesNow--;
         minutes.innerHTML = getMinutesNow;
         getSecondsNow = 59;
         seconds.innerHTML = getSecondsNow;
     }
     
-    if(getMinutesNow == 0){
+    if(getMinutesNow == 0 && getSecondsNow == 0){
         getHoursNow--;
         hours.innerHTML = getHoursNow;
         getMinutesNow = 59;
@@ -81,7 +82,7 @@ function eventCount(){
     
 }
 
-// const interval = setInterval(eventCount, 0.00000000000001);
+const interval = setInterval(eventCount, 100);
 
 
-// const lastSecondInterval = setInterval(lastSeconds, 1000);
+const lastSecondInterval = setInterval(lastSeconds, 100);
