@@ -29,7 +29,7 @@
     &__time {
         display: grid;
         grid-template-columns: repeat(4, 100px);
-        grid-template-rows: 140px;
+        grid-template-rows: auto;
         grid-column-gap: 30px;
     }
     &__list {
@@ -161,6 +161,54 @@
         background-color: white;
         width: 60%;
         height: inherit;
+    }
+
+    @include media(medium) {
+        &__footer-wrapper {
+            padding: 25px 0;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 30px 0;
+
+        }
+        &__btn-block {
+
+        }
+        &__members {
+            
+        }
+        &__money {
+            grid-column: 1/4;
+        }
+    }
+    @include media(small) {
+        &__title-heading {
+            font-size: 2.4rem;
+        }
+        &__center {
+            margin-top: 75px;
+
+            grid-template-rows: 1fr 250px;
+
+        }
+        &__time{
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        &__footer-wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+        }
+        &__btn-block {
+            grid-row: 1/2;
+        }
+        &__members {
+            grid-row: 2/3;
+        }
+        &__money {
+            grid-row: 3/4;
+            grid-column: 1/4;
+        }
     }
 }
 

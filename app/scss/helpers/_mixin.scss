@@ -5,4 +5,46 @@
 
 @mixin media($breakpoint){
     
+      @if $breakpoint == medium{
+            @media(max-width: 820px){
+                  @content;
+            }
+      }
+      @if $breakpoint == mediumSmall {
+            @media(max-width: 700px){
+                  @content;
+            }
+      }
+      @if $breakpoint == small {
+            @media(max-width: 507px){
+                  @content;
+            }
+      }
+}
+@mixin mediaMin($breakpoint){
+    
+      @if $breakpoint == medium{
+            @media(min-width: 822px){
+                  @content;
+            }
+      }
+     
+}
+
+
+@mixin marginRem($margin, $route){
+
+      @if $route == top {
+            margin-top: $margin / 16 + 0rem;
+      }
+      @if $route == bottom {
+            margin-bottom: $margin / 16 + 0rem;
+      }
+      @if $route == left {
+            margin-left: $margin / 16 + 0rem;
+      }
+      @if $route == right {
+            margin-right: $margin / 16 + 0rem;
+      }
+      
 }

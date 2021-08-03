@@ -38,4 +38,53 @@
                 border-right: none;
             }
     }
-}
+    @include media(medium){
+       &__main {
+           grid-template-columns: repeat(2, 1fr);
+           
+       }
+       &__item {
+
+            &:nth-child(n){
+                border: none;
+                border-bottom: 1px solid #393939;
+            }
+            &:nth-child(1n){
+                
+                border-right: 1px solid #393939;
+            }
+            &:nth-child(2n){
+                
+                border-right: none;
+            }
+        
+        }
+    }
+    @include media(small){
+        margin-top: 125px;
+        &__up-left {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 100px;
+
+            margin-bottom: 50px;
+        }
+        &__heading {
+            margin: 0;
+        }
+        &__main {
+            grid-template-columns: 1fr;
+        }
+        &__item {
+
+            &:nth-child(n){
+                border: none;
+                border-bottom: 1px solid #393939;
+            
+        
+            }
+        }
+
+    }   
+
+}   

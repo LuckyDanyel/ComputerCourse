@@ -72,4 +72,25 @@
             }
         }
     }
+    @include media(medium) {
+        &__main {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 50px 0;
+        }
+    }
+    @include media(small) {
+        &__up-left {
+            grid-template-rows: auto 1fr;
+           
+        }
+        &__logo {
+            grid-row: 1;
+        }
+        &__heading {
+            margin: 0;
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+    }
 }

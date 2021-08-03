@@ -3,26 +3,45 @@ let hours = document.querySelector('#hours');
 let minutes = document.querySelector('#minutes');
 let seconds = document.querySelector('#seconds');
 
+let burgerBlock = document.querySelector('#burger__menu');
+let menu = document.querySelector('#menu');
+
 let date = new Date();
 
 date.setDate(1);
+let MountEvent = 9;
 let getDaysEvent = 24;
-let getHoursNow = 1;
-let getMinutesNow = 2;
-let getSecondsNow = 1;
+let getHoursNow = 3;
+let getMinutesNow = 4;
+let getSecondsNow = 30;
 
 time.innerHTML = getDaysEvent;
 hours.innerHTML = getHoursNow;
 minutes.innerHTML = getMinutesNow;
 seconds.innerHTML = getSecondsNow;
 
+burgerBlock.addEventListener('click', first);
+
+
+function first(e){
+    
+    e.stopImmediatePropagation();
+    this.removeEventListener("click", first);
+    burgerBlock.onclick = second;
+    menu.style.display = 'flex';
+}
+function second(){
+    menu.style.display = 'none';
+    burgerBlock.onclick = first;
+    
+}
 
 function lastSeconds(){
 if(getHoursNow == 0 && getMinutesNow == 0 && getDaysEvent == 0){
-    console.log(getSecondsNow); 
+
     getSecondsNow--;
     seconds.innerHTML = getSecondsNow;
-    console.log(getSecondsNow); 
+   
     
    if(getSecondsNow == 0){
         
@@ -82,6 +101,7 @@ function eventCount(){
     }
     
 }
+
 
 const interval = setInterval(eventCount, 1000);
 

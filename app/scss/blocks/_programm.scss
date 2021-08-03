@@ -132,5 +132,14 @@
         grid-column: 2/3;
         grid-row: 1/7;
     }
+
+    @include media(small){
+        margin-top: 170px;
+        &__heading {
+            text-align: center;
+
+            margin-top: 0;
+        }
+    }
     
 }

@@ -35,7 +35,7 @@ color: white;
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: minmax(300px, auto);
+        
     }
     &__list {
         padding: 0;
@@ -81,5 +81,16 @@ color: white;
     &__list-block_height-end {
         height: 10px;
         background: linear-gradient(to right, #7C6AFA, #C89AFC);
+    }
+
+    @include media(mediumSmall){
+        &__main {
+            grid-template-columns: 1fr;
+        }
+    }
+    @include media(small){
+        &__up-left{
+            grid-template-columns: 1fr 3fr;
+        }
     }
 }
